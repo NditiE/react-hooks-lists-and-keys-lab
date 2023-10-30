@@ -1,9 +1,18 @@
-import React from "react";
 
-function NavBar() {
-  const links = ["home", "about", "projects"];
+import React from 'react';
 
-  return <nav>{/* display an <a> tag for each link here */}</nav>;
-}
+const NavBar = () => {
+  const links = ['home', 'about', 'projects'];
+  return (
+    <div className="navbar">
+      {links.map((link, index) => (
+        <a key={index} href={`#${link.toLowerCase()}`}>
+          {link}
+        </a>
+      ))}
+    </div>
+  );
+};
 
 export default NavBar;
+
